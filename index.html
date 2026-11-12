@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कॉमर्स क्लासेस & ट्यूशन | Manish Sir</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-blue: #0d3b66;
+            --secondary-blue: #1d528b;
+            --accent-red: #d90429;
+            --accent-yellow: #f4a261;
+            --gold: #ffb703;
+            --light-bg: #f8fafd;
+            --dark-text: #1e293b;
+            --light-text: #64748b;
+            --white: #ffffff;
+            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Hind', 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Top Marquee Bar */
+        .top-bar {
+            background: linear-gradient(90deg, var(--accent-red), #b7094c);
+            color: var(--white);
+            padding: 8px 0;
+            font-size: 0.95rem;
+            font-weight: 500;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .top-bar marquee {
+            display: block;
+            width: 100%;
+        }
+
+        .top-bar span {
+            margin: 0 15px;
+        }
+
+        /* Navbar */
+        nav {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 12px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .logo-text span {
+            color: var(--accent-red);
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 0.95rem;
+        }
+
+        .btn-call {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-call:hover {
+            background: var(--secondary-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(13, 59, 102, 0.3);
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: var(--white);
+        }
+
+        .btn-whatsapp:hover {
+            background: #1ebd5a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+        }
+
+        /* Hero Section with Education Image */
+        .hero {
+            background: linear-gradient(135deg, rgba(13,59,102,0.96), rgba(29,82,139,0.92));
+            color: var(--white);
+            padding: 60px 6% 70px;
+            position: relative;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-text {
+            text-align: left;
+        }
+
+        .badge {
+            background: var(--gold);
+            color: #000;
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(255, 183, 3, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.04); }
+            100% { transform: scale(1); }
+        }
+
+        .hero h2 {
+            font-size: 2.7rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+            line-height: 1.2;
+            text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p.tagline {
+            font-size: 1.25rem;
+            margin-bottom: 25px;
+            color: #e2e8f0;
+        }
+
+        .mentor-badge {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-size: 1.05rem;
+            margin-bottom: 25px;
+        }
+
+        .mentor-badge strong {
+            color: #ffd166;
+            letter-spacing: 1px;
+            font-size: 1.25rem;
+        }
+
+        /* Top Student Image Box */
+        .hero-image-wrapper {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-width: 440px;
+            height: 330px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+            transition: var(--transition);
+        }
+
+        .hero-img:hover {
+            transform: scale(1.03) translateY(-4px);
+            border-color: var(--gold);
+        }
+
+        .img-floating-tag {
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--white);
+            color: var(--primary-blue);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            white-space: nowrap;
+        }
+
+        /* Section Layout */
+        .section-padding {
+            padding: 60px 6%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background: var(--accent-red);
+            border-radius: 2px;
+        }
+
+        /* Class Cards & Subject Section */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 5px solid var(--primary-blue);
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.15);
+        }
+
+        .card.red-border {
+            border-top-color: var(--accent-red);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .card-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            background: #eef2f6;
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            transition: var(--transition);
+        }
+
+        .card:hover .card-icon {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .card.red-border:hover .card-icon {
+            background: var(--accent-red);
+            color: var(--white);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            color: var(--dark-text);
+            font-weight: 700;
+        }
+
+        .card-desc {
+            color: var(--light-text);
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+
+        /* Key Subjects Badges */
+        .subject-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .subject-pill {
+            background: #f1f5f9;
+            color: var(--primary-blue);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .card:hover .subject-pill {
+            background: #e2e8f0;
+        }
+
+        /* Key Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-item {
+            background: var(--white);
+            padding: 25px 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            border: 1px solid #edf2f7;
+            transition: var(--transition);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+        }
+
+        .feature-icon-wrapper {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            background: #fef3c7;
+            color: #d97706;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .feature-item:hover .feature-icon-wrapper {
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
+        .feature-item h3 {
+            font-size: 1.2rem;
+            color: var(--dark-text);
+            margin-bottom: 8px;
+        }
+
+        .feature-item p {
+            color: var(--light-text);
+            font-size: 0.95rem;
+        }
+
+        /* Mission Banner */
+        .mission-banner {
+            background: linear-gradient(135deg, #1e293b, var(--primary-blue));
+            color: var(--white);
+            padding: 45px 30px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 40px auto 0;
+            position: relative;
+            box-shadow: var(--shadow);
+            border-left: 6px solid var(--gold);
+        }
+
+        .mission-banner h3 {
+            color: var(--gold);
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .mission-banner p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 500;
+        }
+
+        /* Contact & Location Section */
+        .contact-box {
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+        }
+
+        .contact-icon {
+            font-size: 1.6rem;
+            color: var(--white);
+            background: var(--accent-red);
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-icon.green {
+            background: #25d366;
+        }
+
+        .contact-icon.blue {
+            background: var(--primary-blue);
+        }
+
+        .contact-text h4 {
+            font-size: 1.15rem;
+            margin-bottom: 5px;
+            color: var(--dark-text);
+        }
+
+        .contact-text a, .contact-text p {
+            color: var(--light-text);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .contact-text a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Floating WhatsApp Action Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 9999;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.12) rotate(8deg);
+            background-color: #1ebd5a;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 70px;
+            background: #333;
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            pointer-events: none;
+        }
+
+        .floating-whatsapp:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Modern Complete Footer */
+        .main-footer {
+            background: #081a2f;
+            color: #cbd5e1;
+            padding-top: 60px;
+            border-top: 4px solid var(--gold);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 40px;
+            padding-bottom: 50px;
+        }
+
+        .footer-col h3, .footer-col h4 {
+            color: var(--white);
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .footer-col h3::after, .footer-col h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--accent-red);
+            border-radius: 2px;
+        }
+
+        .footer-col p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--gold);
+            transform: translateX(5px);
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .footer-contact-item i {
+            color: var(--gold);
+            margin-top: 4px;
+        }
+
+        .footer-contact-item a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-contact-item a:hover {
+            color: var(--white);
+        }
+
+        /* Bottom Footer Bar with Specific Developer Information */
+        .footer-bottom {
+            background: #040e1a;
+            padding: 25px 5%;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.95rem;
+        }
+
+        .developer-section {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 22px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            text-align: right;
+        }
+
+        .developer-section p {
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .developer-section strong {
+            color: #ffd166;
+            font-size: 1.05rem;
+        }
+
+        .developer-section .dev-title {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            margin: 3px 0;
+        }
+
+        .developer-section a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .developer-section a:hover {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-text {
+                text-align: center;
+            }
+            .hero-img {
+                max-width: 100%;
+                height: 280px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.1rem;
+            }
+            .hero p.tagline {
+                font-size: 1.1rem;
+            }
+            nav {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .nav-actions {
+                width: 100%;
+                justify-content: center;
+            }
+            .contact-box {
+                padding: 25px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .developer-section {
+                text-align: center;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Marquee Bar (Details strictly as per poster) -->
+    <div class="top-bar">
+        <marquee onmouseover="this.stop();" onmouseout="this.start();" scrollamount="6">
+            <span>✨ <strong>“सही मार्गदर्शन, बेहतर परिणाम”</strong></span> | 
+            <span>🎓 <strong>सीखें बेहतर, बढ़ें आगे, जीतें भविष्य</strong></span> | 
+            <span>📚 <strong>कक्षा 1 से 10</strong> (हिंदी & English माध्यम - सभी विषय ट्यूशन)</span> | 
+            <span>📊 <strong>कक्षा 11 से 12</strong> (कॉमर्स विशेष बैच - सभी विषय)</span> | 
+            <span>👨‍🏫 श्रेष्ठ मार्गदर्शन: <strong>MANISH SIR</strong></span> | 
+            <span>📞 संपर्क करें: <strong>9098552080, 9399170449</strong></span> | 
+            <span>📍 पता: <strong>Near Indian Bank, csc tilkeja</strong></span> | 
+            <span>🌟 <strong>आज ही जुड़ें और अपने भविष्य को बनाएं उज्जवल!</strong></span>
+        </marquee>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav>
+        <div class="logo-container">
+            <i class="fa-solid fa-book-open-reader logo-icon"></i>
+            <div class="logo-text">
+                <h1>कॉमर्स क्लासेस & ट्यूशन</h1>
+                <span>बेहतर शिक्षा, उज्जवल भविष्य</span>
+            </div>
+        </div>
+        <div class="nav-actions">
+            <a href="tel:9098552080" class="btn btn-call">
+                <i class="fa-solid fa-phone"></i> कॉल करें
+            </a>
+            <!-- Direct WhatsApp Integration -->
+            <a href="https://wa.me/919098552080?text=नमस्ते%20Manish%20Sir,%20मुझे%20ट्यूशन%20क्लासेस%20के%20बारे%20में%20जानकारी%20चाहिए।" target="_blank" class="btn btn-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> व्हाट्सएप
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Random Education Image of Students -->
+    <header class="hero">
+        <div class="hero-container">
+            <!-- Left: Hero Text Content -->
+            <div class="hero-text">
+                <div class="badge">
+                    <i class="fa-solid fa-star"></i> सीखें बेहतर • बढ़ें आगे • जीतें भविष्य <i class="fa-solid fa-star"></i>
+                </div>
+                <h2>कॉमर्स क्लासेस & ट्यूशन</h2>
+                <p class="tagline">हर विद्यार्थी की सफलता के लिए समर्पित एक विश्वसनीय शिक्षण संस्थान</p>
+                
+                <div class="mentor-badge">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <span>श्रेष्ठ मार्गदर्शन द्वारा: <strong>MANISH SIR</strong></span>
+                </div>
+
+                <div>
+                    <a href="https://wa.me/919098552080?text=नमस्ते,%20मैं%20एडमिशन%20के%20संबंध%20में%20पूछताछ%20करना%20चाहता/चाहती%20हूँ।" target="_blank" class="btn btn-whatsapp" style="padding: 12px 28px; font-size: 1.05rem;">
+                        <i class="fa-brands fa-whatsapp"></i> अभी इन्क्वायरी करें
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Random Educational Student Image -->
+            <div class="hero-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800" alt="Students studying together in classroom" class="hero-img">
+                <div class="img-floating-tag">
+                    <i class="fa-solid fa-graduation-cap" style="color: var(--accent-red);"></i> नए बैच प्रारंभ!
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="section-padding">
+        
+        <!-- Courses / Classes Offered -->
+        <div class="section-header" id="courses">
+            <h2 class="section-title">हमारी कक्षाएँ एवं पाठ्यक्रम</h2>
+            <p style="margin-top: 10px; color: var(--light-text);">प्रत्येक छात्र के स्तर के अनुसार सुनियोजित अध्ययन व्यवस्था</p>
+        </div>
+
+        <div class="grid-2">
+            <!-- Class 1 to 10 -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                    <div>
+                        <h3 class="card-title">कक्षा 1 से 10</h3>
+                        <span style="color: var(--accent-red); font-weight: 600;">(हिंदी & English माध्यम)</span>
+                    </div>
+                </div>
+                <p class="card-desc">सभी प्रमुख विषयों की संपूर्ण ट्यूशन, बेसिक कॉन्सेप्ट्स की मजबूती एवं अनुभवी शिक्षकों द्वारा व्यक्तिगत मार्गदर्शन।</p>
+                <div class="subject-strip">
+                    <span class="subject-pill"><i class="fa-solid fa-calculator"></i> गणित (Maths)</span>
+                    <span class="subject-pill"><i class="fa-solid fa-flask"></i> विज्ञान (Science)</span>
+                    <span class="subject-pill"><i class="fa-solid fa-language"></i> अंग्रेजी (English)</span>
+                    <span class="subject-pill"><i class="fa-solid fa-plus"></i> सभी विषय</span>
+                </div>
+            </div>
+
+            <!-- Class 11 to 12 -->
+            <div class="card red-border">
+                <div class="card-header">
+                    <div class="card-icon" style="color: var(--accent-red);">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <h3 class="card-title">कक्षा 11 से 12 (कॉमर्स)</h3>
+                        <span style="color: var(--primary-blue); font-weight: 600;">(विशेष कॉमर्स बैच)</span>
+                    </div>
+                </div>
+                <p class="card-desc">कॉमर्स स्ट्रीम के सभी मुख्य विषयों की गहन तैयारी, बोर्ड परीक्षा पर केंद्रित अध्ययन एवं करियर गाइडेंस।</p>
+                <div class="subject-strip">
+                    <span class="subject-pill"><i class="fa-solid fa-coins"></i> वाणिज्य (Commerce)</span>
+                    <span class="subject-pill"><i class="fa-solid fa-square-root-variable"></i> गणित (Maths)</span>
+                    <span class="subject-pill"><i class="fa-solid fa-dna"></i> जीव विज्ञान (Biology)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features / विशेषताएँ -->
+        <div class="section-header" style="margin-top: 50px;" id="features">
+            <h2 class="section-title">हमारी मुख्य विशेषताएँ</h2>
+            <p style="margin-top: 10px; color: var(--light-text);">हम क्यों हैं विद्यार्थियों की पहली पसंद?</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon-wrapper">
+                    <i class="fa-solid fa-users-viewfinder"></i>
+                </div>
+                <h3>छोटे बैच</h3>
+                <p>सीमित सीटें ताकि हर छात्र पर व्यक्तिगत ध्यान सुनिश्चित किया जा सके।</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon-wrapper">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                </div>
+                <h3>साप्ताहिक टेस्ट</h3>
+                <p>नियमित साप्ताहिक टेस्ट और मूल्यांकन द्वारा परीक्षा की बेहतर तैयारी।</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon-wrapper">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+                <h3>व्यक्तिगत ध्यान</h3>
+                <p>कमजोर विषयों पर अतिरिक्त समय और प्रत्येक छात्र पर विशेष फोकस।</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon-wrapper">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                </div>
+                <h3>किफायती शुल्क</h3>
+                <p>उचित व किफायती शुल्क में उच्च गुणवत्तापूर्ण एवं उत्कृष्ट शिक्षा।</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon-wrapper">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                </div>
+                <h3>लचीला समय</h3>
+                <p>छात्रों की सुविधा अनुसार मॉर्निंग और इवनिंग बैच के विकल्प।</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon-wrapper">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                </div>
+                <h3>बेहतर अध्ययन सामग्री</h3>
+                <p>सरल भाषा में नोट्स, प्रैक्टिस शीट्स एवं नियमित डाउट क्लीयरिंग सेशन।</p>
+            </div>
+        </div>
+
+        <!-- Mission Statement -->
+        <div class="mission-banner">
+            <h3><i class="fa-solid fa-bullseye"></i> हमारा उद्देश्य</h3>
+            <p>“हर छात्र को गुणवत्तापूर्ण शिक्षा देना ताकि वह अपने लक्ष्य को प्राप्त कर सके और एक उज्जवल भविष्य का निर्माण कर सके!”</p>
+        </div>
+
+        <!-- Contact & Location Box -->
+        <div class="section-header" style="margin-top: 60px;" id="contact">
+            <h2 class="section-title">संपर्क एवं केंद्र का पता</h2>
+        </div>
+
+        <div class="contact-box">
+            <!-- Mobile 1 -->
+            <div class="contact-info-item">
+                <div class="contact-icon green">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="contact-text">
+                    <h4>WhatsApp / Call</h4>
+                    <a href="https://wa.me/919098552080" target="_blank">+91 9098552080</a>
+                    <a href="tel:9098552080" style="font-size: 0.9rem; color: #16a34a;">(कॉल करने के लिए टैप करें)</a>
+                </div>
+            </div>
+
+            <!-- Mobile 2 -->
+            <div class="contact-info-item">
+                <div class="contact-icon blue">
+                    <i class="fa-solid fa-phone-volume"></i>
+                </div>
+                <div class="contact-text">
+                    <h4>हेल्पलाइन नंबर</h4>
+                    <a href="tel:9399170449">+91 9399170449</a>
+                    <a href="tel:9399170449" style="font-size: 0.9rem; color: var(--primary-blue);">(कॉल करने के लिए टैप करें)</a>
+                </div>
+            </div>
+
+            <!-- Address -->
+            <div class="contact-info-item">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="contact-text">
+                    <h4>क्लास का पता</h4>
+                    <p>Near Indian Bank, csc tilkeja</p>
+                    <span style="font-size: 0.9rem; color: #94a3b8;">(आसानी से पहुँचने योग्य स्थान)</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/919098552080?text=नमस्ते%20Manish%20Sir,%20मुझे%20ट्यूशन%20के%20बारे%20में%20जानकारी%20चाहिए।" class="floating-whatsapp" target="_blank" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">सीधे चैट करें</span>
+    </a>
+
+    <!-- Complete Professional Footer Section -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Col 1: About Institute -->
+            <div class="footer-col">
+                <h3>कॉमर्स क्लासेस & ट्यूशन</h3>
+                <p>“सही मार्गदर्शन, बेहतर परिणाम” - हमारा संकल्प हर छात्र को गुणवत्तापूर्ण एवं परिणामोन्मुखी शिक्षा प्रदान कर उनके उज्जवल भविष्य की नींव मजबूत करना है।</p>
+                <p style="color: var(--gold); font-weight: 600;"><i class="fa-solid fa-chalkboard-user"></i> मेंटर: मनीष सर (Manish Sir)</p>
+            </div>
+
+            <!-- Col 2: Quick Links -->
+            <div class="footer-col">
+                <h4>त्वरित लिंक्स</h4>
+                <ul>
+                    <li><a href="#courses"><i class="fa-solid fa-angle-right"></i> कक्षा 1 से 10 (ट्यूशन)</a></li>
+                    <li><a href="#courses"><i class="fa-solid fa-angle-right"></i> कक्षा 11 - 12 (कॉमर्स)</a></li>
+                    <li><a href="#features"><i class="fa-solid fa-angle-right"></i> हमारी विशेषताएँ</a></li>
+                    <li><a href="#contact"><i class="fa-solid fa-angle-right"></i> संपर्क एवं पता</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Key Subjects -->
+            <div class="footer-col">
+                <h4>प्रमुख विषय</h4>
+                <ul>
+                    <li><a href="#courses"><i class="fa-solid fa-check"></i> वाणिज्य (Commerce)</a></li>
+                    <li><a href="#courses"><i class="fa-solid fa-check"></i> गणित (Maths)</a></li>
+                    <li><a href="#courses"><i class="fa-solid fa-check"></i> जीव विज्ञान (Biology)</a></li>
+                    <li><a href="#courses"><i class="fa-solid fa-check"></i> अंग्रेजी एवं अन्य विषय</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Contact & Timing -->
+            <div class="footer-col">
+                <h4>संपर्क सूत्र</h4>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <a href="tel:9098552080">+91 9098552080</a><br>
+                        <a href="tel:9399170449">+91 9399170449</a>
+                    </div>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i>
+                    <a href="https://wa.me/919098552080" target="_blank">व्हाट्सएप पर संपर्क करें</a>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Near Indian Bank, csc tilkeja</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Developer Credit Bottom Bar -->
+        <div class="footer-bottom">
+            <div>
+                <p>&copy; 2026 <strong>कॉमर्स क्लासेस & ट्यूशन</strong>. सर्वाधिकार सुरक्षित।</p>
+                <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 4px;">श्रेष्ठ मार्गदर्शन द्वारा: Manish Sir | Near Indian Bank, csc tilkeja</p>
+            </div>
+            
+            <!-- Specified Developer Credit Block -->
+            <div class="developer-section">
+                <p>Designed & Developed by <strong>Durgesh Kaiwart</strong></p>
+                <p class="dev-title">Web & Android Application Developer</p>
+                <p style="margin-top: 4px;">
+                    <a href="#" title="Portfolio">Portfolio</a> | 
+                    Contact- <a href="tel:9174750027">9174750027</a> | 
+                    <a href="https://wa.me/919174750027" target="_blank" style="color:#25d366;" title="WhatsApp Durgesh Kaiwart"><i class="fa-brands fa-whatsapp"></i> Chat</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
